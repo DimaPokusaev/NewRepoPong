@@ -189,7 +189,6 @@ namespace Pong
             #endregion
 
             #region update paddle positions
-            // move player 1 paddle up using p1.Y and PADDLE_SPEED
 
             if (aKeyDown == true && p1.Y > 4) { p1.Y = p1.Y - PADDLE_SPEED; }
 
@@ -201,11 +200,11 @@ namespace Pong
 
             if (ball.Y >= pc.Y)
             {
-                if(!(pc.Y > this.Width - 200)) { pc.Y = pc.Y + PADDLE_SPEED; }
+                if(!(pc.Y > this.Width - 200)) { pc.Y = pc.Y + PADDLE_SPEED/2; }
             }
             else
             {
-                if (!(pc.Y < 4)) { pc.Y = pc.Y - PADDLE_SPEED; }
+                if (!(pc.Y < 4)) { pc.Y = pc.Y - PADDLE_SPEED/2; }
             }
             #endregion
 
